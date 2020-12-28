@@ -16,7 +16,7 @@ public class Teclado
             ret = teclado.readLine ();
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {}
 
         return ret;
     }
@@ -30,7 +30,7 @@ public class Teclado
             ret = Byte.parseByte (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {}
         catch (NumberFormatException erro)
         {
             throw new Exception ("Byte invalido!");
@@ -48,7 +48,7 @@ public class Teclado
             ret = Short.parseShort (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
         catch (NumberFormatException erro)
         {
             throw new Exception ("Short invalido!");
@@ -66,7 +66,7 @@ public class Teclado
             ret = Integer.parseInt (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
         catch (NumberFormatException erro)
         {
             throw new Exception ("Int invalido!");
@@ -77,8 +77,7 @@ public class Teclado
 
     public static long getUmLong () throws Exception
     {
-      //long ret=(long)0;
-      //long ret=0;
+      
         long ret=0L;
 
         try
@@ -86,7 +85,7 @@ public class Teclado
             ret = Long.parseLong (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
         catch (NumberFormatException erro)
         {
             throw new Exception ("Long invalido!");
@@ -97,8 +96,7 @@ public class Teclado
 
     public static float getUmFloat () throws Exception
     {
-      //float ret=0;
-      //float ret=(float)0.0;
+      
         float ret=0.0F;
 
         try
@@ -106,7 +104,7 @@ public class Teclado
             ret = Float.parseFloat (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
         catch (NumberFormatException erro)
         {
             throw new Exception ("Float invalido!");
@@ -117,9 +115,7 @@ public class Teclado
 
     public static double getUmDouble () throws Exception
     {
-      //double ret=0;
-      //double ret=(long)0;
-      //double ret=0L;
+
         double ret=0.0;
 
         try
@@ -127,7 +123,7 @@ public class Teclado
             ret = Double.parseDouble (teclado.readLine ());
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {}
         catch (NumberFormatException erro)
         {
             throw new Exception ("Double invalido!");
@@ -153,7 +149,7 @@ public class Teclado
              ret = str.charAt(0);
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
 
         return ret;
     }
@@ -175,7 +171,7 @@ public class Teclado
             ret = Boolean.parseBoolean (str);
         }
         catch (IOException erro)
-        {} // sei que nao vai dar erro
+        {} 
 
         return ret;
     }

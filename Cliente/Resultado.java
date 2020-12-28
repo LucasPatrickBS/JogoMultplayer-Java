@@ -1,17 +1,21 @@
 public class Resultado extends Comunicado
 {
-    private double valorResultante;
+    private int valorResultante;
 
-    public Resultado (double valorResultante)
+    public Resultado (int valorResultante)
     {
         this.valorResultante = valorResultante;
     }
 
-    public double getValorResultante ()
+    public int getValorResultante ()
     {
         return this.valorResultante;
     }
     
+    public void setValorResultante(int x){
+        this.valorResultante = x;
+    }
+
     public String toString ()
     {
 		return (""+this.valorResultante);

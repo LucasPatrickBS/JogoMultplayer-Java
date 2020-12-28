@@ -3,11 +3,14 @@ import java.util.*;
 
 public class AceitadoraDeConexao extends Thread
 {
-    private ServerSocket        pedido;
-    private ArrayList<Parceiro> usuarios;
+    private ServerSocket               pedido;
+    public static  ArrayList<Parceiro> usuarios;
+    private static int                 vezDoJogador;
+    private static int                 jogoAcabou;
 
-    public AceitadoraDeConexao
-    (String porta, ArrayList<Parceiro> usuarios)
+
+
+    public AceitadoraDeConexao(String porta, ArrayList<Parceiro> usuarios)
     throws Exception
     {
         if (porta==null)
@@ -28,6 +31,28 @@ public class AceitadoraDeConexao extends Thread
 
         this.usuarios = usuarios;
     }
+
+    public static void setProximoJogador()
+	{
+		if(vezDoJogador == 2)
+			vezDoJogador = 0;
+		else
+			vezDoJogador++;
+	}
+
+    public static void fimDeJogo()
+    {
+		jogoAcabou = 1;
+    }
+    
+    public static boolean jogoAcabou()
+	{
+		if (jogoAcabou == 1)
+			return true;
+
+		return false;
+	}
+
 
     public void run ()
     {

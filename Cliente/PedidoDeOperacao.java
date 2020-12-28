@@ -1,20 +1,28 @@
-public class PedidoDeOperacao extends Comunicado
-{
+public class PedidoDeOperacao extends Comunicado{
     private char   operacao;
-    private double valor;
+    private int    valor;
+    private String nomeUsuario;
     
-    public PedidoDeOperacao (char operacao, double valor)
+    public PedidoDeOperacao (char operacao, int valor, String nome)
     {
-        this.operacao = operacao;
-        this.valor    = valor;
+        this.operacao    = operacao;
+        this.valor       = valor;
+        this.nomeUsuario = nome;
     }
+
+    public PedidoDeOperacao(){};
     
     public char getOperacao ()
     {
         return this.operacao;
     }
-    
-    public double getValor ()
+
+    public String getNome ()
+    {
+        return this.nomeUsuario;
+    }
+
+    public int getValor ()
     {
         return this.valor;
     }
@@ -23,4 +31,6 @@ public class PedidoDeOperacao extends Comunicado
     {
         return (""+this.operacao+this.valor);
     }
+    
+   
 }
